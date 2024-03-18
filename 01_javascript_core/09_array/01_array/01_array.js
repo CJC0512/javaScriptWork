@@ -7,7 +7,7 @@ const arr = ['바나나', '복숭아', '키위'];
 console.log(arr);
 console.log(arr.length);
 
-/* 2. 배열 빌트인 새엉자 함수 */
+/* 2. 배열 빌트인 생성자 함수 */
 const arr2 = Array();
 console.log(arr2);
 console.log(arr2.length);
