@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function increase(number) {
+            const promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    /* 성공 */
+                    const result = number + 10;
+
+                    if (result > 50) {
+                        /* 실패 */
+                        const e = new Error('NumberTooBig');
+
+                        /* 실패에 대한 반환 (reject) */
+                        return reject(e);
+                    }
+
+                    /* 성공에 대한 반환 (result) */
+                    return resolve(result);
+                }, 1000);
+            });
+
+            return promise;
+        }
+
+        console.log(increase(0));
+
+        // increase(0)
+        //     .then(number => console.log(number));
+
+        increase(0)
+            .then(number => {
+                console.log(number);
+
+                return increase(number);
+            })
+            .then(number => {
+                console.log(number);
+
+                return increase(number);
+            })
+            .then(number => {
+                console.log(number);
+
+                return increase(number);
+            })
+            .then(number => {
+                console.log(number);
+
+                return increase(number);
+            })
+            .then(number => {
+                console.log(number);
+                console.log('end');
+            });
+
+
+    </script>
+</body>
+
+</html>
