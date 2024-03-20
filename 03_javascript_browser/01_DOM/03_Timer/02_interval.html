@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_interval</title>
+</head>
+
+<body>
+    <h2>02. interval</h2>
+
+    <h3>setInterval</h3>
+
+    <script>
+
+        /* 약간 로딩쪽에 활용 가능? 바람직하지는 않을 듯? 텀을 줬다가 실행하는 구문 */
+        /* 비동기1>비동기2 => 콜백 지옥 : 비동기2가 먼저 시행된 후, 비동기1이 실행 */
+        let count = 0;
+        const timeId = setInterval(() => {
+            console.log(count++);
+            if (count == 6) {
+                clearInterval(timeId);      // setInterval을 멈추는 용도 주석될 경우 계속 증가함
+                console.log('interval timer 종료!');
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
