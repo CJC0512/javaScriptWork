@@ -21,7 +21,7 @@ console.log(Math.round(10));
 console.log(Math.round());                      
 console.log('--------------------');
 
-// Math.ceil
+// Math.ceil 올림
 console.log(Math.ceil(10.1));                 
 console.log(Math.ceil(10.9));                 
 console.log(Math.ceil(-10.1));                
@@ -30,7 +30,7 @@ console.log(Math.ceil(10));
 console.log(Math.ceil());                     
 console.log('--------------------');
 
-// Math.floor
+// Math.floor 내림
 console.log(Math.floor(10.1));                
 console.log(Math.floor(10.9));                
 console.log(Math.floor(-10.1));               
@@ -55,7 +55,7 @@ const random = Math.floor((Math.random() * 100) + 1);
 console.log(random);
 console.log('--------------------');
 
-// Math.pow
+// Math.pow 
 console.log(Math.pow(2, 2));                 
 console.log(Math.pow(2, -2));                
 console.log(Math.pow(2));                    

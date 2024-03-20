@@ -31,7 +31,7 @@ console.log(`chickenList.unshift(): ${chickenList.unshift('마늘치킨')}`);
 
 console.log(`unshift 후: ${chickenList}`);
 
-/* unshift */                       // 배열 앞에 항목 제거
+/* shift */                       // 배열 앞에 항목 제거
 console.log(`chickenList.shift(): ${chickenList.shift()}`);
 console.log(`shift 후: ${chickenList}`);
 
