@@ -24,7 +24,19 @@
         /* setTimeout 인수 첫 번째 콜백함수를 던짐, 두번째 ms단위 초*/
         setTimeout(() => console.log('실행'), 1000);
 
+    </script>
 
+    <button onclick="clearTimeoutFunc();">당장 취소</button>
+
+    <script>
+        const timeId = window.setTimeout(() => console.log('나는 곧 취소 될거야'), 3000);
+
+        function clearTimeoutFunc() {
+            console.log('곧이 아니라 지금 당장 취소');
+
+            /* 매개변수로 던져진 setTimeout 함수 무효화 */
+            window.clearTimeout(timeId);
+        }
     </script>
 </body>
 
