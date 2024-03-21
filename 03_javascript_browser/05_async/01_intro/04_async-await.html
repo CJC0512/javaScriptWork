@@ -34,6 +34,13 @@
             return promise;
         }
 
+        /* 
+            await의 두가지 기능
+            1. await가 달린 함수의 결과인 promise에 담긴 결과(promise 내부의 resolve에 담긴 성공 결과)를 반환한다.(then과 비슷)
+            2. await가 달린 비동기 처리들은 그들 간에는 동기식으로 동작하게 된다.
+            (await를 쓰기 위해서 함수에 async를 달면 그 async 함수는 promise를 반환한다.)
+        */
+
         async function run() {
             let result = await increase(0);
             console.log(result);
@@ -49,7 +56,8 @@
 
             result = await increase(result);
             console.log(result);
-            console.log('end');
+
+            return 1;                           // Promise로 반환됨
 
             /* 에러 출력 50 초과 */
             // result = await increase(result);
@@ -57,7 +65,9 @@
         }
 
 
-        run();
+        console.log('반환값: ', run());         // Promise로 반환됨
+        run().then(result => console.log(result));
+
     </script>
 
 </body>
